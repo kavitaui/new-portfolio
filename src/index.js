@@ -1,17 +1,39 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import {createRoot} from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import {BrowserRouter, Route, Routes}from "react-router-dom";
+import AboutUs from "./Componants/HeaderFolder/AboutUs";
+import Blog from "./Componants/HeaderFolder/Blog";
+import Home from "./Componants/HeaderFolder/Home";
+import HowWorks from "./Componants/HeaderFolder/How-Works";
+import Price from "./Componants/HeaderFolder/Price";
+import Service from "./Componants/HeaderFolder/Service";
+import Testimonial from "./Componants/HeaderFolder/Testimonial";
+import Gallary from "./Componants/HeaderFolder/Gallary";
+
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  
+<BrowserRouter>
+<Routes>
+   <Route path="/" element={<App/>}>
+ <Route path ="about-us" element ={<AboutUs/>}/>
+ <Route path ="home" element ={<Home/>}/>
+ <Route path ="how-Works" element ={<HowWorks/>}/>
+ <Route path ="blog" element ={<Blog/>}/>
+ <Route path ="gallary" element ={<Gallary/>}/>
+ <Route path ="price" element ={<Price/>}/>
+ <Route path ="service" element ={<Service/>}/>
+ <Route path ="testimonial" element ={<Testimonial/>}/>
+
+ </Route>
+        </Routes>
+  </BrowserRouter>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+
