@@ -1,5 +1,13 @@
 import React from "react";
+import { useState } from "react";
+import Calendar from "react-calendar";
+
+
+
+
 export default function Home (){
+  
+    const[valuePiece, setValuePiece] = useState(new Date());
     return(
         <div className="col-12 ">
             <div className="row px-5 py-5 pic">
@@ -18,7 +26,7 @@ export default function Home (){
                   <input type = "text" className="form-control mt-2 " placeholder="Email"/>
                   <input type = "text" className="form-control mt-2 " placeholder="Package"/>
                   <input type = "text" className="form-control mt-2" id="datepicker" placeholder="Avilability"/>
-                  <input type = "submit" className="custom-button mt-2  " value="CHECK AVILABILITY "/>
+                 <input type = "submit" className="custom-button mt-2  " value="CHECK AVILABILITY "/> 
                 </div>
                 
               </form>
