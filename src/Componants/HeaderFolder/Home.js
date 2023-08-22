@@ -10,6 +10,21 @@ export default function Home() {
     const [date, setDate] = useState(new Date())
     const [show, setShow] = useState(false)
 
+    const formatDate=(date)=>{
+        var month = '' + (date.getMonth() + 1);
+        var day = '' + date.getDate();
+        var year = date.getFullYear();
+      
+        if (month.length < 2) {
+          month = '0' + month;
+        }
+        if (day.length < 2) {
+          day = '0' + day;
+        }
+      
+        return [month, day, year].join('/');
+      }
+
     return (
 
         <div className="col-12 ">
@@ -29,7 +44,7 @@ export default function Home() {
                                     <input type="text" className="form-control mt-2 " placeholder="Email" />
                                     <input type="text" className="form-control mt-2 " placeholder="Package" />
                                     <div class="w-100">
-                                        <input type="text"  onClick={() => setShow(!show)} className="form-control mt-2" id="datepicker" placeholder="Avilability" value={date}/>
+                                        <input type="text"  onClick={() => setShow(!show)} className="form-control mt-2" id="datepicker" placeholder="Avilability" value={formatDate(date)}/>
                                         {show && <Calendar onChange={setDate} value={date} />}
                                         <span className="cal-icon" ><BiCalendar /></span>
                                     </div>

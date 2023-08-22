@@ -15,6 +15,8 @@ code {
 
 .head-wrapper {
   background-color: #752154;
+  position: sticky;
+  top:0;
 }
 
 .head-wrapper li {
@@ -29,6 +31,7 @@ code {
  font-weight:700;
   padding-right: 10px;
   color: white;
+
 }
 
 .pic {
@@ -172,6 +175,6 @@ button.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--r
   text-align: center;
   color:#752154;
  }
-form-control{
+.form-control{
   border-radius: 0px !important;
 }
