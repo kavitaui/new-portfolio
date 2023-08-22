@@ -1,25 +1,30 @@
-import React from "react";
-import service1 from "../../Asset/images/service-11.jpg";
-import service2 from "../../Asset/images/service-21.jpg";
-export default function AboutUs(){
+export default function Service(){
     return(
-        <div className="col-12 ">
-            <div className="row px-2 py-2">
+        <div className="col-12 px-2 py-2">
+           <div className="row">
+           We provides high standard of customer service, quality and guest experience.</div> 
+           Sed consectetur tortor dictum dolor bibendumut suscipit orci volutpusce efficitur tellus eu dui tempor consecteturer metus ex convallis oruris mollis pulvinar tellus sit amet viverra.
+        <div className="row">
+        <div className="col-6">
+        Wedding History
+Sed consectetur tortor dictum dolor bibendumut suscipit orci volutpusce efficitur tellus eu dui tempor consecteturer metus ex convallis oruris mollis pulvinar tellus sit amet viverra.
 
-         <div className="heading">Our Venue Services</div>  
-          <div className="col-6">
-            <img src={service2} alt =""/>
-           <h3>Wedding Ceremony</h3> 
-Praesent elementum felis a orci convallis accumsan. Pellentesque vel dui a nulla feugiat vestibulum sed sit amet ligula.
+Praesent fringilla sapien id risus euismod ultrices. Sed quis felis quis urna accumsan sagittis sed quis turpis. euismod ultrices. Sed quis felis quis urna accumsan sagittis sedhasellus gravida, tortor sit amet sodales consectetur.
+        </div>
+        <div className="col-6">
+        Wedding Planner Team
+Sed consectetur tortor dictum dolor bibendumut suscipit orci volutpusce efficitur tellus eu dui tempor consecteturer metus ex convallis oruris mollis pulvinar tellus sit amet viverra.
 
-          </div>
-          <div className="col-6">
-          <img src={service1} alt =""/>
-         <h3>Wedding Reception</h3>
-Elementum felis a orci convallis accumsan. Pellentesque vel dui a nulla feugiat vestibulum lorem ipsum dolorsit amet.
-          </div>
-          </div>
+Praesent fringilla sapien id risus euismod ultrices. Sed quis felis quis urna accumsan sagittis sed quis turpis. euismod ultrices. Sed quis felis quis urna accumsan sagittis sedhasellus gravida, tortor sit amet sodales consectetur. 
+        </div>
+        <div className="row px-5 py-5">
+            <div className="col-6 px-5 py-5">
+            USA - NY, 901 Easte Street, Wilmington, CA 90744
+1800-123-4567     
+            </div>
+
+        </div>
+</div>
         </div>
     )
-
 }

@@ -25,8 +25,8 @@ code {
 .head-wrapper li a {
   text-decoration: none;
   margin: 5px;
-  font-size: 18px;
-  border-right: 1px solid white;
+  
+ font-weight:700;
   padding-right: 10px;
   color: white;
 }
@@ -56,6 +56,10 @@ code {
 
 .booking h4 {
   text-align: center;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  font-size: 1.5rem;
 }
 
 .custom-button {
@@ -123,7 +127,7 @@ code {
 .img-responsive {
   max-width: 499px;
   max-height: 68px;
-  padding-top: 28px;
+  padding-top: 0px;
 }
 
 h1 b {
@@ -168,3 +172,6 @@ button.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--r
   text-align: center;
   color:#752154;
  }
+form-control{
+  border-radius: 0px !important;
+}

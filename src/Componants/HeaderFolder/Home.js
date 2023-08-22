@@ -23,7 +23,7 @@ export default function Home() {
                         A Wedding Venue</h4>
                         <div className="form-group px-3 py-2">
                             <form>
-                                <div className="form-row   py-2   ">
+                                <div className="form-row  py-2  ">
                                     <div> <input type="text" className="form-control mt-2 " placeholder="Name" /></div>
                                     <div></div> <input type="text" className="form-control mt-2  " placeholder="Phone" />
                                     <input type="text" className="form-control mt-2 " placeholder="Email" />
