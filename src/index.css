@@ -19,7 +19,7 @@ code {
 
 .head-wrapper li {
   float: left;
-
+  list-style-type: none;
 }
 
 .head-wrapper li a {
@@ -142,4 +142,25 @@ h1 b {
 }
 button.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--range.react-calendar__tile--rangeStart.react-calendar__tile--rangeEnd.react-calendar__tile--rangeBothEnds.react-calendar__month-view__days__day:hover{
   background-color: #ffc217;
-} 
+}
+    .heading{
+
+     padding: 50px;
+        font-size: 32px;
+        color: #752154;
+        line-height: 1.1;
+        text-align: center;
+        font-family: Playfair Display;
+        font-weight: 400;
+        font-style: normal;
+
+ }
+ .head-wrapper a:hover{
+  color: #ffc217;
+  text-decoration: underline;
+ }
+ .top{
+  text-align: center;
+  color:#752154;
+  background-color: #ffc217;
+ }
