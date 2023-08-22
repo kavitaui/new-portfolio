@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-
-
+import logo from "../../Asset/images/logo1.png";
 export default function Header() {
     return (
         <div className = "head-wrapper">
@@ -8,7 +7,7 @@ export default function Header() {
                 <div className = "row  py-2">
                     <div className="col-5  py-2  ">
                 
-                     <span >VENUE BOOK</span>    
+                    <img src={logo} alt="" className="img-responsive" />   
                 </div>
                  <div className="col-7  py-2 ">
                     <div className="head-wrapper "> <ul><li> <Link to="/home">HOME</Link>

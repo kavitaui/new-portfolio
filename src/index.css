@@ -12,24 +12,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.head-wrapper{
-  background-color:#752154;
+
+.head-wrapper {
+  background-color: #752154;
 }
-.head-wrapper li{
-  float:left;
-  
+
+.head-wrapper li {
+  float: left;
+
 }
-.head-wrapper li a{
+
+.head-wrapper li a {
   text-decoration: none;
   margin: 5px;
   font-size: 18px;
   border-right: 1px solid white;
   padding-right: 10px;
-  color:white;
+  color: white;
 }
-.pic{
-  background-image:url('/Users/kavitapandey/new-portfolio/src/Asset/images/banner2.jpg') ;
+
+.pic {
+  background-image: url('/Users/kavitapandey/new-portfolio/src/Asset/images/banner2.jpg');
 }
+
 .content h1 {
   font-size: 70px;
   color: #ffffff;
@@ -40,45 +45,101 @@ code {
   font-style: normal;
   margin-top: 60px;
 }
+
 .booking {
   color: purple;
   font-family: Playfair Display;
   padding: 50px;
   margin-top: 0px;
- background-color:#f3f3f3; 
-  }
-  .booking h4{
-    text-align: center;
-  }
-  .custom-button{
-    background-color: #ffc217;
-    color:black;
-    width: 221px;
-    height:40px;
-    border:0cm;
-  }
-  .custom-button:hover{
-    background-color: #752154;
-    color:#ffffff;
-  }
-  .footer{
-    background-color: #ffc217;
-    height: 200px;
-    color:#262225;
-  }
-  .footer button{
-    background-color: #752154;
-    width: 221px;
-    height:40px;
-    border:0cm;
-    color:#ffffff;
-  }
-  .footer2{
-    background-color:#262225;
-    width :100%;
-    height:150px;
-    text-align: center;
-    color: #717577;
-  }
+  background-color: #f3f3f3;
+}
+
+.booking h4 {
+  text-align: center;
+}
+
+.custom-button {
+  background-color: #ffc217;
+  color: black;
+  width: 287px;
+  height: 40px;
+  border: 0cm;
+}
+
+.custom-button:hover {
+  background-color: #752154;
+  color: #ffffff;
+}
+
+.footer {
+  background-color: #ffc217;
+  height: 200px;
+  color: #262225;
+}
+
+.footer button {
+  background-color: #752154;
+  width: 221px;
+  height: 40px;
+  border: 0cm;
+  color: #ffffff;
+}
+
+.footer2 {
+  background-color: #262225;
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  color: #717577;
+}
+
+.w-100 {
+  position: relative;
+
+}
+
+.cal-icon {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.cal-icon svg{
+  font-size: 25px;
+    margin-top: 7px;
+    margin-right: 5px;
+}
+
+
+.react-calendar {
+  position: absolute;
+  bottom: 38px;
+}
+
+.react-calendar button {
+  border: 0;
+  background-color: #ffffff;
+}
+
+.img-responsive {
+  max-width: 499px;
+  max-height: 68px;
+  padding-top: 28px;
+}
+
+h1 b {
+  color: #ffc217;
+}
 
  
+.react-calendar__month-view__weekdays {
+  background: #000;
+}
+.react-calendar__month-view__weekdays__weekday abbr{
+  text-decoration: none !important;
+  color:#fff;
+  font-size: 12px;
+  padding:5px 8px;
+}
+button.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--range.react-calendar__tile--rangeStart.react-calendar__tile--rangeEnd.react-calendar__tile--rangeBothEnds.react-calendar__month-view__days__day:hover{
+  background-color: #ffc217;
+} 
