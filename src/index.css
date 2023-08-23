@@ -178,3 +178,25 @@ button.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--r
 .form-control{
   border-radius: 0px !important;
 }
+.message{
+  color:#000;
+}
+.popup{
+  color:red;
+}
+.imgWrapper{
+  border: 5px solid white;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 450px;
+  width: 450px;
+}
+.error-field{
+  border:2px solid red;
+  border-radius: 2px;
+}
+.sucess{
+  border:2px solid green;
+  border-radius: 2px;
+}
