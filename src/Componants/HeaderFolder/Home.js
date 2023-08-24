@@ -61,6 +61,34 @@ export default function Home() {
         } else {
             newErrors.Name = '';
         }
+       
+        if (formData.Phone.trim() === '') {
+            newErrors.Phone = 'Phone No is reqiured'
+            isValid = false;
+        } else {
+            newErrors.Phone = '';
+        }
+        if (formData.Email.trim() === '') {
+            newErrors.Email = 'Email is reqiured'
+            isValid = false;
+        } else {
+            newErrors.Email = '';
+        }
+        if (formData.Package.trim() === '') {
+            newErrors.Package = 'Email is reqiured'
+            isValid = false;
+        } else {
+            newErrors.Package = '';
+        }
+        if (formData.Date.trim() === '') {
+            newErrors.Date = 'Package is reqiured'
+            isValid = false;
+        } else {
+            newErrors.Date = '';
+        }
+
+
+
         setErrors(newErrors);
         return isValid;
     }
@@ -101,27 +129,37 @@ export default function Home() {
                                         <input
                                             type="text"
                                             onChange={handleChange}
-                                            className={`form-control mt-2  ${!formData.Name.length ? 'error-field' : ''} ${formData.Name.length ? 'sucess' : ''}`}
+                                            className={`form-control mt-2  ${errors.Name.length ? 'error-field' : ''} ${formData.Name ? 'success' : ''}`}
                                             placeholder="Name"
                                             value={formData.Name}
                                             name="Name"
                                         />
-                                    </div>
+                                    
                                     <p className="popup">
                                         {errors.Name.length > 0 ? errors.Name : null}
                                     </p>
-                                    <div></div> <input type="text" onChange={handleChange} className="form-control mt-2  " placeholder="Phone" name="Phone" value={formData.Phone} />
+                                     <input type="text" onChange={handleChange}
+                                     className="form-control mt-2" placeholder="Phone" name="Phone" value={formData.Phone} />
+                                    <p className="popup">
+                                        {errors.Phone.length > 0 ? errors.Phone : null}
+                                    </p>
                                     <input type="text" className="form-control mt-2 " onChange={handleChange} placeholder="Email" value={formData.Email} name="Email" />
+                                    <p className="popup">
+                                        {errors.Email.length > 0 ? errors.Email : null}
+                                    </p>
                                     <input type="text" className="form-control mt-2 " onChange={handleChange} placeholder="Package" value={formData.Package} name="Package" />
+                                    <p className="popup">
+                                        {errors.Package.length > 0 ? errors.Package : null}
+                                    </p>
                                     <div className="w-100">
                                         <input type="text" onClick={() => setShow(!show)} className="form-control mt-2" id="datepicker" placeholder="Avilability" onChange={handleChange} value={formatDate(date)} name="Avilability" />
-                                        {show && <Calendar onChange={setDate} value={ formData.date} name="Date" />}
+                                        {show && <Calendar onChange={setDate} value={ formData.date} name="Avilability" />}
                                         <span className="cal-icon" ><BiCalendar /></span>
                                     </div>
                                     <button type="submit" onClick={handleSubmit} className="custom-button mt-2">CHECK AVILABILITY</button>
                                     <p className="message">{sucessMsg.length ? sucessMsg : null}</p>
                                 </div>
-
+</div>
                             </form>
                         </div>
                     </div>
