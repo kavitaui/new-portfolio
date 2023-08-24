@@ -1,4 +1,4 @@
-import React from "react";
+import React , { useEffect } from "react";
 import { useState } from "react";
 import Calendar from "react-calendar";
 import { BiCalendar } from "react-icons/bi";
@@ -26,6 +26,7 @@ export default function Home() {
     const handleSubmit = (e) => {
         debugger;
         e.preventDefault();
+        debugger;
         if (validateForm()) {
             setSucessMsg("Thank you for sharing details!!, we will get back to you soon.")
             setFormData({
@@ -35,11 +36,14 @@ export default function Home() {
                 Package: '',
                 Date: '',
             })
+            debugger;
             setTimeout(() => {
                 setSucessMsg('')
             }, 3000);
         }
-        else setSucessMsg("form is not valid");
+        else{ 
+            setSucessMsg("form is not valid")
+        }
     }
     const handleChange = (e) => {
         debugger
@@ -96,10 +100,16 @@ export default function Home() {
     const [date, setDate] = useState(new Date())
     const [show, setShow] = useState(false)
 
-    const formatDate = (date) => {
-        var month = '' + (date.getMonth() + 1);
-        var day = '' + date.getDate();
-        var year = date.getFullYear();
+    useEffect(()=>{
+       formData.Date = formatDate(date);
+       debugger;
+    }, [date, formData])
+
+    const formatDate = (d) => {
+        if(!d) return '';
+        var month = '' + (d.getMonth() + 1);
+        var day = '' + d.getDate();
+        var year = d.getFullYear();
 
         if (month.length < 2) {
             month = '0' + month;
@@ -126,37 +136,27 @@ export default function Home() {
                             <form>
                                 <div className="form-row  py-2  ">
                                     <div>
-                                        <input
-                                            type="text"
-                                            onChange={handleChange}
-                                            className={`form-control mt-2  ${errors.Name.length ? 'error-field' : ''} ${formData.Name ? 'success' : ''}`}
-                                            placeholder="Name"
-                                            value={formData.Name}
-                                            name="Name"
-                                        />
-                                    
-                                    <p className="popup">
-                                        {errors.Name.length > 0 ? errors.Name : null}
-                                    </p>
+                                    <input type="text" onChange={handleChange} className={`form-control mt-2 ${errors.Name.length ? 'error-field' : ''} ${formData.Name ? 'sucess' : ''}`} placeholder="Name"  name="Name" value={formData.Name} />
+                                    <p className="popup">{errors.Name.length > 0 ? errors.Name : null}</p>
                                      <input type="text" onChange={handleChange}
-                                     className="form-control mt-2" placeholder="Phone" name="Phone" value={formData.Phone} />
+                                     className= {`form-control mt-2 ${errors.Name.length ? 'error-field' : ''} ${formData.Name ? 'sucess' : ''}`} placeholder="Phone" name="Phone" value={formData.Phone} />
                                     <p className="popup">
                                         {errors.Phone.length > 0 ? errors.Phone : null}
                                     </p>
-                                    <input type="text" className="form-control mt-2 " onChange={handleChange} placeholder="Email" value={formData.Email} name="Email" />
+                                    <input type="text" className={`form-control mt-2 ${errors.Name.length ? 'error-field' : ''} ${formData.Name ? 'sucess' : ''}`} onChange={handleChange} placeholder="Email" value={formData.Email} name="Email" />
                                     <p className="popup">
                                         {errors.Email.length > 0 ? errors.Email : null}
                                     </p>
-                                    <input type="text" className="form-control mt-2 " onChange={handleChange} placeholder="Package" value={formData.Package} name="Package" />
+                                    <input type="text" className={`form-control mt-2 ${errors.Name.length ? 'error-field' : ''} ${formData.Name ? 'sucess' : ''}`} onChange={handleChange} placeholder="Package" value={formData.Package} name="Package" />
                                     <p className="popup">
                                         {errors.Package.length > 0 ? errors.Package : null}
                                     </p>
                                     <div className="w-100">
-                                        <input type="text" onClick={() => setShow(!show)} className="form-control mt-2" id="datepicker" placeholder="Avilability" onChange={handleChange} value={formatDate(date)} name="Avilability" />
-                                        {show && <Calendar onChange={setDate} value={ formData.date} name="Avilability" />}
+                                        <input type="text" onClick={() => setShow(!show)} className={`form-control mt-2 ${errors.Name.length ? 'error-field' : ''} ${formData.Name ? 'sucess' : ''}`} id="datepicker" placeholder="Avilability"  value={formData.Date} name="Avilability" />
+                                        {show && <Calendar onChange={setDate} value={ date} name="Avilability" />}
                                         <span className="cal-icon" ><BiCalendar /></span>
                                     </div>
-                                    <button type="submit" onClick={handleSubmit} className="custom-button mt-2">CHECK AVILABILITY</button>
+                                    <button type="submit" onClick={handleSubmit} className="custom-button mt-2"   >CHECK AVILABILITY</button>
                                     <p className="message">{sucessMsg.length ? sucessMsg : null}</p>
                                 </div>
 </div>
