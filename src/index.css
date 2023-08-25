@@ -201,3 +201,14 @@ button.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--r
   border:3px solid green !important;
   border-radius: 2px;
 }
+.circle{
+  margin: 0 auto 22px;
+  height:140px;
+  width:140px;
+  border-radius: 100%;
+  border:3px solid #efb81f;
+  
+}
+.work-block-wedding{
+  box-sizing: border-box;
+}
