@@ -234,7 +234,7 @@ button.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--r
 .box1 {
   position: fixed;
   width: 100%;
-  background-color: #ff8093;
+  background-color: hsl(217.5deg 3.64% 56.86%);
   z-index: 11;
   left: 0px;
   top: 0px;
@@ -245,19 +245,20 @@ button.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--r
 
 .box2 {
   position: fixed;
-  width: 500px;
+  width: 611px;
   background-color: white;
   z-index: 12;
   left: 50%;
   top: 28%;
   bottom: 0px;
-  height: 400px;
-  margin-left: -250px;
-  padding: 10px
+  height: 296px;
+  margin-left: -305.5px;
+  padding: 10px;
+  
 }
 
 .box3 {
-  background-color: #ff8093;
+  background-color: hsl(352.62deg 67.01% 80.98%);
   height: 100%;
   position:relative;
   
@@ -278,4 +279,46 @@ button.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--r
 .wedding-gift{
   text-align: right;
   width:60%;
+}
+.content-left{
+  color:#ffffff;
+}
+.wrapper {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.open {
+  opacity: 1;
+}
+
+/* CSS for the element you want to show/hide */
+.wrapper {
+  opacity: 0; /* Start with opacity 0 to hide the element */
+  transition: opacity 5s ease-in-out; /* Add a smooth transition */
+}
+
+/* CSS for the element when it's visible */
+.wrapper.open {
+  opacity: 1;
+}
+
+/* CSS animation to gradually fade in */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* CSS animation to gradually fade out */
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

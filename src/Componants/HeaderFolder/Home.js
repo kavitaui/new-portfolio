@@ -24,9 +24,9 @@ export default function Home() {
 
     })
     const handleSubmit = (e) => {
-        debugger;
+        
         e.preventDefault();
-        debugger;
+        
         if (validateForm()) {
             setSucessMsg("Thank you for sharing details!!, we will get back to you soon.")
             setFormData({
@@ -36,7 +36,7 @@ export default function Home() {
                 Package: '',
                 Date: '',
             })
-            debugger;
+            
             setTimeout(() => {
                 setSucessMsg('')
             }, 3000);
@@ -56,7 +56,7 @@ export default function Home() {
         validateForm();
     }
     const validateForm = () => {
-        debugger;
+        
         let isValid = true;
         const newErrors = { ...errors };
         if (formData.Name.trim() === '') {
@@ -102,7 +102,7 @@ export default function Home() {
 
     useEffect(()=>{
        formData.Date = formatDate(date);
-       debugger;
+       
     }, [date, formData])
 
     const formatDate = (d) => {
