@@ -16,8 +16,8 @@ code {
 .head-wrapper {
   background-color: #752154;
   position: sticky;
-  top:0;
-  z-index:10;
+  top: 0;
+  z-index: 10;
 }
 
 .head-wrapper li {
@@ -28,8 +28,8 @@ code {
 .head-wrapper li a {
   text-decoration: none;
   margin: 5px;
-  
- font-weight:700;
+
+  font-weight: 700;
   padding-right: 10px;
   color: white;
 
@@ -111,10 +111,11 @@ code {
   right: 0px;
   top: 0px;
 }
-.cal-icon svg{
+
+.cal-icon svg {
   font-size: 25px;
-    margin-top: 7px;
-    margin-right: 5px;
+  margin-top: 7px;
+  margin-right: 5px;
 }
 
 
@@ -138,54 +139,64 @@ h1 b {
   color: #ffc217;
 }
 
- 
+
 .react-calendar__month-view__weekdays {
   background: #000;
 }
-.react-calendar__month-view__weekdays__weekday abbr{
+
+.react-calendar__month-view__weekdays__weekday abbr {
   text-decoration: none !important;
-  color:#fff;
+  color: #fff;
   font-size: 12px;
-  padding:5px 8px;
+  padding: 5px 8px;
 }
-button.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--range.react-calendar__tile--rangeStart.react-calendar__tile--rangeEnd.react-calendar__tile--rangeBothEnds.react-calendar__month-view__days__day:hover{
+
+button.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--range.react-calendar__tile--rangeStart.react-calendar__tile--rangeEnd.react-calendar__tile--rangeBothEnds.react-calendar__month-view__days__day:hover {
   background-color: #ffc217;
 }
-    .heading{
 
-     padding: 50px;
-        font-size: 32px;
-        color: #752154;
-        line-height: 1.1;
-        text-align: center;
-        font-family: Playfair Display;
-        font-weight: 400;
-        font-style: normal;
+.heading {
 
- }
- .head-wrapper a:hover{
+  padding: 50px;
+  font-size: 32px;
+  color: #752154;
+  line-height: 1.1;
+  text-align: center;
+  font-family: Playfair Display;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+.head-wrapper a:hover {
   color: #ffc217;
   text-decoration: underline;
- }
- .top{
+}
+
+.top {
   text-align: center;
-  color:#752154;
+  color: #752154;
   background-color: #ffc217;
- }
- .images{
+}
+
+.images {
   text-align: center;
-  color:#752154;
- }
-.form-control{
+  color: #752154;
+}
+
+.form-control {
   border-radius: 0px !important;
 }
-.message{
-  color:#000;
+
+.message {
+  color: #000;
 }
-.popup{
-  color:red;
+
+.popup {
+  color: red;
 }
-.imgWrapper{
+
+.imgWrapper {
   border: 5px solid white;
   display: inline-block;
   border-radius: 50%;
@@ -193,22 +204,78 @@ button.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--r
   height: 450px;
   width: 450px;
 }
-.error-field{
-  border:3px solid red !important;
+
+.error-field {
+  border: 3px solid red !important;
   border-radius: 3px;
 }
-.sucess{
-  border:3px solid green !important;
+
+.sucess {
+  border: 3px solid green !important;
   border-radius: 2px;
 }
-.circle{
+
+.circle {
   margin: 0 auto 22px;
-  height:140px;
-  width:140px;
+  height: 140px;
+  width: 140px;
   border-radius: 100%;
-  border:3px solid #efb81f;
+  border: 3px solid #efb81f;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+}
+
+.circle h1 {
+  margin-top: 29px;
   
 }
-.work-block-wedding{
-  box-sizing: border-box;
+
+.box1 {
+  position: fixed;
+  width: 100%;
+  background-color: #ff8093;
+  z-index: 11;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  height: 100%;
+  opacity: 0.6;
+}
+
+.box2 {
+  position: fixed;
+  width: 500px;
+  background-color: white;
+  z-index: 12;
+  left: 50%;
+  top: 28%;
+  bottom: 0px;
+  height: 400px;
+  margin-left: -250px;
+  padding: 10px
+}
+
+.box3 {
+  background-color: #ff8093;
+  height: 100%;
+  position:relative;
+  
+ 
+}
+.box3 span{
+  font-size: 30px;
+  font-weight: 20px;
+  position:absolute;
+  color:#f3f3f3;
+  right: 6px;
+  top: -5px;
+}
+.content{
+  text-align: center;
+  color:#fff;
+}
+.wedding-gift{
+  text-align: right;
+  width:60%;
 }
