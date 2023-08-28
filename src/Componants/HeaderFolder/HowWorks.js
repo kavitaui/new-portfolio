@@ -19,7 +19,7 @@ export default function HowWorks() {
                         Send Free Enquiry and Book Online For wedding ceremony.
                     </div>
                     <div className="col-3">
-                    <div className="circle"><h1>03</h1></div>
+                    <div className="circle"><h1>04</h1></div>
                         Book Venue
                         Book the venue by paying a token fee online for visit & book it.
                     </div>
