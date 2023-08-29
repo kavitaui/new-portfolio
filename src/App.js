@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Outlet  } from "react-router-dom";
 import Footer  from "./Componants/SharedComponants/Footer"
 import Header from "./Componants/SharedComponants/Header";
 import Model from "./Componants/Model";
 
 export default function App(){
+  const [model, setModel] = useState(false);
   return(
   
    
@@ -12,7 +13,7 @@ export default function App(){
    
     <Header/>
     <Outlet />
-    <Model/>
+    <Model model={model} setModel={setModel}/>
    <Footer/>
    
 

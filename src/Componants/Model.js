@@ -1,20 +1,20 @@
 
 import { useEffect, useState } from "react";
 import gift from "../Asset/images/gift.jpeg";
-export default function Model() {
+export default function Model(props) {
     const [email, setEmail] = useState();
     const [emailError, setEmailError] = useState("");
-    const [model, setModel] = useState(true);
+   
     const[sucessMsg,setSucessMsg] =useState("");
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (email.length > 0) {
+        if (email?.length > 0) {
             setEmailError("");
             setSucessMsg("thank u for submitting email")
             setTimeout(
                 ()=>{
                   setEmail(""); 
-                  setModel(false); 
+                  props.setModel(false); 
                   setSucessMsg("") ;   
                 },2000
             )
@@ -26,15 +26,15 @@ export default function Model() {
    
     useEffect(() => {
         setTimeout(() => {
-            setModel(true);
+            props.setModel(true);
         }, 1000)
-    }, []);
+    }, [props, props.setModel]);
     return (
-        <> {model ? (<div className={`wrapper ${model ? 'open' : ''}`} >
+        <> {props.model ? (<div className={`wrapper ${props.model ? 'open' : ''}`} >
             <div className="box1" ></div>
             <div className="box2">
                 <div className="box3" >
-                    <span onClick={() => { setModel(false) }}>x</span>
+                    <span onClick={() => { props.setModel(false) }}>x</span>
                     <div className="col-12 px-2 py-2 content">
                         <div className="row">
                             <div><h2>Welcome!</h2></div></div></div>
@@ -54,7 +54,7 @@ export default function Model() {
                                         <button type="submit" onClick={(e) => { handleSubmit(e) }} className="signup mt-2">
                                             Sign Up
                                         </button>
-                                        <p>{sucessMsg.length>0?sucessMsg:null}</p>
+                                        <p>{sucessMsg?.length>0?sucessMsg:null}</p>
 
                                     </div>
                                 </form>
