@@ -18,6 +18,7 @@ code {
   position: sticky;
   top: 0;
   z-index: 10;
+  
 }
 
 .head-wrapper li {
@@ -32,6 +33,7 @@ code {
   font-weight: 700;
   padding-right: 10px;
   color: white;
+  font-family: Playfair Display;
 
 }
 
@@ -61,14 +63,15 @@ code {
 .booking h4 {
   text-align: center;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 200;
   line-height: 1.1;
   font-size: 1.5rem;
+  font-family: Playfair Display;
 }
 
 .custom-button {
   background-color: #ffc217;
-  color: black;
+  color: #272426;
   width: 287px;
   height: 40px;
   border: 0cm;
@@ -141,7 +144,7 @@ h1 b {
 
 
 .react-calendar__month-view__weekdays {
-  background: #000;
+  background: #272426;
 }
 
 .react-calendar__month-view__weekdays__weekday abbr {
@@ -171,6 +174,8 @@ button.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--r
 .head-wrapper a:hover {
   color: #ffc217;
   text-decoration: underline;
+  font-weight: 700;
+
 }
 
 .top {
@@ -189,7 +194,7 @@ button.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--r
 }
 
 .message {
-  color: #000;
+  color: #272426;
 }
 
 .popup {
@@ -221,14 +226,18 @@ button.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--r
   width: 140px;
   border-radius: 100%;
   border: 3px solid #efb81f;
-  position: relative;
-  text-align: center;
-  display: inline-block;
+  padding:50px;
+
+
+  color:#272426;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .circle h1 {
-  margin-top: 29px;
-  
+  margin: 50px;
+
 }
 
 .box1 {
@@ -254,35 +263,41 @@ button.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--r
   height: 296px;
   margin-left: -305.5px;
   padding: 10px;
-  
+
 }
 
 .box3 {
   background-color: hsl(352.62deg 67.01% 80.98%);
   height: 100%;
-  position:relative;
-  
- 
+  position: relative;
+
+
 }
-.box3 span{
+
+.box3 span {
   font-size: 30px;
   font-weight: 20px;
-  position:absolute;
-  color:#f3f3f3;
+  position: absolute;
+  color: #f3f3f3;
   right: 6px;
   top: -5px;
+  cursor:pointer;
 }
-.content{
+
+.content {
   text-align: center;
-  color:#fff;
+  color: #fff;
 }
-.wedding-gift{
+
+.wedding-gift {
   text-align: right;
-  width:60%;
+  width: 60%;
 }
-.content-left{
-  color:#ffffff;
+
+.content-left {
+  color: #ffffff;
 }
+
 .wrapper {
   opacity: 0;
   transition: opacity 2s ease-in-out;
@@ -294,8 +309,10 @@ button.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--r
 
 /* CSS for the element you want to show/hide */
 .wrapper {
-  opacity: 0; /* Start with opacity 0 to hide the element */
-  transition: opacity 5s ease-in-out; /* Add a smooth transition */
+  opacity: 0;
+  /* Start with opacity 0 to hide the element */
+  transition: opacity 5s ease-in-out;
+  /* Add a smooth transition */
 }
 
 /* CSS for the element when it's visible */
@@ -308,6 +325,7 @@ button.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--r
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -318,7 +336,47 @@ button.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--r
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
   }
+}
+
+.input-field {
+  width: 322px;
+  margin-left: 9px;
+  border-radius: 23px;
+  font-weight: 600px;
+  color:#272426;
+}
+.signup {
+  border-radius: 25px;
+  background-color: hsl(352.4deg 70.75% 58.43%);
+  border-color: none;
+  margin-left: 10px;
+  width: 118px;
+  color: white;
+
+  height: 40px;
+  border: 1px solid transparent;
+font-weight: 300px;
+}
+h2{
+  font-size: 32px;
+  color: #752154;
+  line-height: 1.1;
+  text-align: center;
+  font-family: Playfair Display;
+  font-weight: 400;
+  font-style: normal;
+}
+ span{
+  color:#272426;
+  font-size: larger;
+  font-weight: 500;
+  font-family: Playfair Display;
+}
+.content1{
+  color:#272426;
+  font-family: Playfair Display;
 }

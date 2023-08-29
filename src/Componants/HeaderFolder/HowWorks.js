@@ -5,23 +5,23 @@ export default function HowWorks() {
                <h2>How It Works</h2>
                     <div className="col-3 work-block-wedding">
                         <div className="circle"><h1>01</h1></div>
-                        Search Venue
-                        Views Photos,Menu,Reviews the venue that’s perfect for you.
+                        <span>Search Venue</span>
+                       <div className="content1"> Views Photos,Menu,Reviews the venue that’s perfect for you.</div>
                     </div>
                     <div className="col-3">
                     <div className="circle"><h1>02</h1></div>  
-                        Select Venue
-                        Select your venue managers directly and to find more details.
+                       <span>Select Venue</span> 
+                      <div className="content1">  Select your venue managers directly and to find more details.</div>
                     </div>
                     <div className="col-3">
                     <div className="circle"><h1>03</h1></div>
-                        Enquire Venue
-                        Send Free Enquiry and Book Online For wedding ceremony.
+                       <span>Enquire Venue</span>
+                       <div className="content1"> Send Free Enquiry and Book Online For wedding ceremony.</div>
                     </div>
                     <div className="col-3">
                     <div className="circle"><h1>04</h1></div>
-                        Book Venue
-                        Book the venue by paying a token fee online for visit & book it.
+                      <span>Book Venue</span>
+                      <div className="content1" >   Book the venue by paying a token fee online for visit & book it.</div>
                     </div>
                 </div>
             </div>
