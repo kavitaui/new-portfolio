@@ -28,7 +28,7 @@ export default function Model(props) {
         setTimeout(() => {
             props.setModel(true);
         }, 1000)
-    }, [props, props.setModel]);
+    }, []);
     return (
         <> {props.model ? (<div className={`wrapper ${props.model ? 'open' : ''}`} >
             <div className="box1" ></div>
