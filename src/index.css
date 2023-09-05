@@ -398,5 +398,8 @@ h2{
 div.picture p{
   color: #752154;
 }
+.fa-angle-double-right::before{
+  content: "\f101";
+}
 
 
