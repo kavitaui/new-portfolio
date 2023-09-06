@@ -1,7 +1,7 @@
 export default function Service(){
     return(
         <div className="col-12 px-2 py-2">
-           <div className="row">
+           <div className="row px-5">
            We provides high standard of customer service, quality and guest experience.</div> 
            Sed consectetur tortor dictum dolor bibendumut suscipit orci volutpusce efficitur tellus eu dui tempor consecteturer metus ex convallis oruris mollis pulvinar tellus sit amet viverra.
         <div className="row">

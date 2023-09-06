@@ -383,8 +383,8 @@ h2{
  div h2{ 
   
   color:#752154;
-  font-size: 20px;
-  margin-left: 447px;
+  font-size: 29px;
+  margin-left: -47px;
   padding: 30px;
 }
 .picture{
@@ -398,8 +398,12 @@ h2{
 div.picture p{
   color: #752154;
 }
-.fa-angle-double-right::before{
-  content: "\f101";
+i.bi.bi-chevron-double-right{
+ content: "\F280";
+}
+.bot{
+  color:#752154;
+  font-family: 'Playfair Display', serif;
 }
 
 
