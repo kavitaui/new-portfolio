@@ -399,11 +399,30 @@ div.picture p{
   color: #752154;
 }
 i.bi.bi-chevron-double-right{
+
  content: "\F280";
+ font-size: 13px;
+ color: #ffc217;
 }
 .bot{
   color:#752154;
   font-family: 'Playfair Display', serif;
+  font-size: 30px;
+}
+div.bot h6{
+  color:#262225;
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+}
+.move{
+  background-color:#ffc217;
+  color:#272525;
+  border:none;
+  margin-left: 100px;
+  font-weight: 700;
+  color: #232022;
+  font-size: 24px;
+  padding: 20px 40px; 
 }
 
 
