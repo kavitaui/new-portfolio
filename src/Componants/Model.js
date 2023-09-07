@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from "react";
+import {useEffect, useState } from "react";
 import gift from "../Asset/images/gift.jpeg";
 export default function Model(props) {
     const [email, setEmail] = useState();
