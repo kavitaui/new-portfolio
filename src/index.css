@@ -106,13 +106,17 @@ code {
 
 .w-100 {
   position: relative;
+width:10px;
+ 
+
 
 }
 
 .cal-icon {
-  position: absolute;
-  right: 0px;
-  top: 0px;
+  position:absolute; 
+  right: 10px;
+  top: 10px;
+
 }
 
 .cal-icon svg {

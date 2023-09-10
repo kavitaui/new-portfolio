@@ -54,6 +54,7 @@ export default function Home() {
             [name]: value
         }));
         validateForm();
+    
     }
     const validateForm = () => {
         
@@ -94,6 +95,7 @@ export default function Home() {
 
 
         setErrors(newErrors);
+        
         return isValid;
     }
 
@@ -102,9 +104,18 @@ export default function Home() {
 
     useEffect(()=>{
        formData.Date = formatDate(date);
+       setShow(false);
        
     }, [date, formData])
-
+/**
+ * 
+ *  jan = 0 + 1 = 1
+ * Nov = 10 +1 = 11
+ * 
+ * 1-1-2024  => 01-01-2024
+ * 
+ * 
+ */
     const formatDate = (d) => {
         if(!d) return '';
         var month = '' + (d.getMonth() + 1);
@@ -134,28 +145,33 @@ export default function Home() {
                         A Wedding Venue</h4>
                         <div className="form-group px-3 py-2">
                             <form>
-                                <div className="form-row  py-2  ">
+                                <div className="form-row px-2 py-2  ">
                                     <div>
+                                        
                                     <input type="text" onChange={handleChange} className={`form-control mt-2 ${errors.Name.length ? 'error-field' : ''} ${formData.Name ? 'sucess' : ''}`} placeholder="Name"  name="Name" value={formData.Name} />
-                                    <p className="popup">{errors.Name.length > 0 ? errors.Name : null}</p>
-                                     <input type="text" onChange={handleChange}
-                                     className= {`form-control mt-2 ${errors.Name.length ? 'error-field' : ''} ${formData.Name ? 'sucess' : ''}`} placeholder="Phone" name="Phone" value={formData.Phone} />
+                                    <p className="popup">{errors.Name.length > 0 ? errors.Name : null}</p></div>
+                                    <div className="row px-3 mt-0">
+                                    <input type="text" onChange={handleChange}
+                                     className= {`form-control mt-2 ${errors.Phone.length ? 'error-field' : ''} ${formData.Phone ? 'sucess' : ''}`} placeholder="Phone" name="Phone" value={formData.Phone} />
                                     <p className="popup">
                                         {errors.Phone.length > 0 ? errors.Phone : null}
                                     </p>
-                                    <input type="text" className={`form-control mt-2 ${errors.Name.length ? 'error-field' : ''} ${formData.Name ? 'sucess' : ''}`} onChange={handleChange} placeholder="Email" value={formData.Email} name="Email" />
+                                   
+                                    <input type="text"  className={`form-control mt-2 ${errors.Email.length ? 'error-field' : ''} ${formData.Email ? 'sucess' : ''}`} onChange={handleChange} placeholder="Email" value={formData.Email} name="Email" />
                                     <p className="popup">
                                         {errors.Email.length > 0 ? errors.Email : null}
                                     </p>
-                                    <input type="text" className={`form-control mt-2 ${errors.Name.length ? 'error-field' : ''} ${formData.Name ? 'sucess' : ''}`} onChange={handleChange} placeholder="Package" value={formData.Package} name="Package" />
+                                  
+                                    <input type="text" className={`form-control mt-2 ${errors.Package.length ? 'error-field' : ''} ${formData.Package ? 'sucess' : ''}`} onChange={handleChange} placeholder="Package" value={formData.Package} name="Package" />
                                     <p className="popup">
                                         {errors.Package.length > 0 ? errors.Package : null}
                                     </p>
-                                    <div className="w-100">
-                                        <input type="text" onClick={() => setShow(!show)} className={`form-control mt-2 ${errors.Name.length ? 'error-field' : ''} ${formData.Name ? 'sucess' : ''}`} id="datepicker" placeholder="Avilability"  value={formData.Date} name="Avilability" />
-                                        {show && <Calendar onChange={setDate} value={ date} name="Avilability" />}
-                                        <span className="cal-icon" ><BiCalendar /></span>
-                                    </div>
+                                
+                                   <div className="w-100">
+                                        <input type="text"  onClick={() =>{ setShow(!show)}} className={`form-control mt-2 ${errors.Date.length ? 'error-field' : ''} ${formData.Date ? 'sucess' : ''}`} id="datepicker" placeholder="Avilability"  value={formData.Date} name="Avilability" />
+                                        {show && <Calendar  onClick={()=>{setShow(show)}} onChange={setDate} value={ date} name="Avilability" />}
+                                        <span className="cal-icon " ><BiCalendar  /></span></div>
+                                
                                     <button type="submit" onClick={handleSubmit} className="custom-button mt-2"   >CHECK AVILABILITY</button>
                                     <p className="message">{sucessMsg.length ? sucessMsg : null}</p>
                                 </div>
