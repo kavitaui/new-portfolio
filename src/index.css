@@ -106,15 +106,15 @@ code {
 
 .w-100 {
   position: relative;
-width:10px;
- 
+
+ right:12px;
 
 
 }
 
 .cal-icon {
   position:absolute; 
-  right: 10px;
+  right: -23px;
   top: 10px;
 
 }
