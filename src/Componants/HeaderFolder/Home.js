@@ -24,7 +24,7 @@ export default function Home() {
 
     })
     const handleSubmit = (e) => {
-        
+        debugger;
         e.preventDefault();
         
         if (validateForm()) {
@@ -168,7 +168,8 @@ export default function Home() {
                                     </p>
                                 
                                    <div className="w-100">
-                                        <input type="text"  onClick={() =>{ setShow(!show)}} className={`form-control mt-2 ${errors.Date.length ? 'error-field' : ''} ${formData.Date ? 'sucess' : ''}`} id="datepicker" placeholder="Avilability"  value={formData.Date} name="Avilability" />
+                                        <input type="text"  onClick={() =>{ setShow(!show)}} className={`form-control mt-2 ${errors.Date.length ? 'error-field' : ''} ${formData.Date ? 'sucess' : ''}`} 
+                                        id="datepicker" placeholder="Avilability"  value={formData.Date} name="Avilability" />
                                         {show && <Calendar  onClick={()=>{setShow(show)}} onChange={setDate} value={ date} name="Avilability" />}
                                         <span className="cal-icon " ><BiCalendar  /></span></div>
                                 
