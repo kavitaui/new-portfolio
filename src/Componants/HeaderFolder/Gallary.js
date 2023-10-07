@@ -1,11 +1,16 @@
-import gallarya from "../../Asset/images/gallery-3.jpg";
-import gallaryb from "../../Asset/images/gallery-4.jpg";
-import gallaryc from "../../Asset/images/gallery-5.jpg";
-import gallaryd from "../../Asset/images/gallery-7.jpg";
-import gallarye from "../../Asset/images/gallery-1.jpg";
-import gallaryf from "../../Asset/images/gallery-8.jpg";
-
+import ImageCrousel from "./ImageCrousel"
+import React  from "react";
 export default function Gallary() {
+   const images=[
+     
+      'https://images-kavita.s3.eu-west-1.amazonaws.com/gallery-8.jpg',
+      'https://images-kavita.s3.eu-west-1.amazonaws.com/gallery-1.jpg',
+     ' https://images-kavita.s3.eu-west-1.amazonaws.com/gallery-4.jpg',
+     ' https://images-kavita.s3.eu-west-1.amazonaws.com/gallery-3.jpg',
+     ' https://images-kavita.s3.eu-west-1.amazonaws.com/gallery-5.jpg',
+     ' https://images-kavita.s3.eu-west-1.amazonaws.com/gallery-7.jpg'
+  
+   ]
 
    return (
       <div className="col-12 px-2 py-2 ">
@@ -14,23 +19,9 @@ export default function Gallary() {
             The Gallery provides Wedding Ceremony & Reception Venue in Texas – Houston, Beaumont, and surrounding areas.</div>
          <div className="row">
             <div className="col-2">
-               <img src={gallarye} alt="" />
+             <ImageCrousel images={images} interval={3000}/>
             </div>
-            <div className="col-2">
-               <img src={gallarya} alt="" />
-            </div>
-            <div className="col-2">
-               <img src={gallaryb} alt="" />
-            </div>
-            <div className="col-2">
-               <img src={gallaryc} alt="" />
-            </div>
-            <div className="col-2">
-               <img src={gallaryd} alt="" />
-            </div>
-            <div className="col-2">
-               <img src={gallaryf} alt="" />
-            </div>
+        
          </div>
       </div>
 
