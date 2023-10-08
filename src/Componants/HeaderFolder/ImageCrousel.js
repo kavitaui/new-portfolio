@@ -13,13 +13,14 @@ const  ImageCrousel = ({images,interval=3000})=> {
     },[currentIndex]);
 
     return (
-        <div className="images">
+       <div  className="box">
             {images.map((image, index) => (
-    <img
+    <img 
     key={index}
      src={image} alt={Image}         />
          ))}
-        </div>
+      </div>
+       
     )
 }
 export default ImageCrousel;

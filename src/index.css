@@ -431,5 +431,18 @@ div.bot h6{
 .movement{
   overflow: hidden;
 }
+.box{
+  display:block;
+  display:flex;
+  flex-direction: row;
+  height:142px;
+  
+}
+.img-container{
+  height:400px;
+ 
+}
+
+
 
 
