@@ -442,6 +442,46 @@ div.bot h6{
   height:400px;
  
 }
+.crousel-dots{
+  display:flex;
+  justify-content: center;
+margin-top: 10px;
+}
+.dot{
+  width:11px;
+  height:11px;
+  background-color: gray;
+  border-radius: 60%;
+  margin: 0 6px;
+  cursor:pointer;
+  transition : background-color 0.3s ese-in-out;
+}
+.active-dot{
+  background-color: #752154;
+}
+.carousel-image {
+  flex: 1;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image.active {
+  transform: translateX(0);
+}
+.carousel-container {
+  width: 1500px; 
+  overflow: hidden;
+}
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-image {
+  flex: 0 0 400px; /* Match the width of the container */
+  height: auto;
+}
+.active {
+  transform: translateX(0);
+}
 
 
 

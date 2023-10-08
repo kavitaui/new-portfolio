@@ -13,14 +13,15 @@ export default function Gallary() {
    ]
 
    return (
-     <> <div className="col-12 px-2 py-2 ">
+     <> <div className="col-12 px-5 py-5 ">
          <div className="row  images">
             <h2>Wedding Venue Gallery</h2>
             The Gallery provides Wedding Ceremony & Reception Venue in Texas – Houston, Beaumont, and surrounding areas.</div></div>
     
-         <div  className="img-container">
+         <div  className="img-container ">
       
              <ImageCrousel images={images} interval={3000} />
+
             </div>
         </>
      
